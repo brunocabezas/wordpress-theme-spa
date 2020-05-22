@@ -6,9 +6,10 @@ Wordpress theme with a minimal setup aimed to rely on SPA's assets: javascript a
 
 As this theme styles and views rely on an SPA build, the output (css and javascript files) must be imported into our `index.php`. This takes place on `functions.php`; which imports this assets from `/dist/`.
 
-After importing files via `wp_enqueue_script` or `wp_enqueue_style`:
+After importing files via [`wp_enqueue_script`](https://developer.wordpress.org/reference/functions/wp_enqueue_script/) or [`wp_enqueue_style`](https://developer.wordpress.org/reference/functions/wp_enqueue_style/):
 
-- scripts must be placed on the footer
+- Scripts must be placed on the footer.
+- Names must be unique.
 - Include if the SPA build outputs chunks, include them as well.
 
 All requests are redirected back to the index.php so your Vue routing is respected.
